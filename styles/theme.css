@@ -1,0 +1,48 @@
+:root {
+  --base-bg: #ffffff;
+  
+  --blue: #4f7df3;
+  --light-blue: #7ea0f6;
+  --pale-blue: hsl(223, 100%, 88%);
+  
+  --light-red: hsl(354, 100%, 66%);
+  
+  --gray: hsl(0, 0%, 59%);
+  --very-dark-blue: #151f29;
+  
+  --input-border: hsl(223, 100%, 88%);
+  --input-color: #151f29;
+  
+  --btn-hover-bg: hsl(223, 87%, 73%);
+
+  /* theme toggle button */
+  --theme-btn-color: hsl(223, 87%, 63%);
+  --theme-btn-bg: #efefef;
+  --theme-btn-border: hsl(223, 87%, 63%);
+  --theme-btn-hover-bg: hsl(223, 87%, 63%);
+  --theme-btn-hover-color: #fff;
+}
+
+.darkThemeColors{
+  --base-bg: #202020;
+  --very-dark-blue: #d6e1ea;
+  
+  --input-border: hsla(223, 100%, 88%, 0.3);
+  --input-color: #d6e1ea;
+  
+  --theme-btn-bg: #373737;
+}
+
+body{
+  color: var(--very-dark-blue);
+  background-color: var(--base-bg);
+  transition: 200ms;
+}
+
+.backdrop-blur{
+  backdrop-filter: blur(5px);
+}
+
+main{
+  background-color: #ffffff05;
+}

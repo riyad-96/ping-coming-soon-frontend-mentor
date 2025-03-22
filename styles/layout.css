@@ -1,0 +1,19 @@
+.main-bg {
+  max-inline-size: 700px;
+  margin-inline: auto;
+  box-sizing: content-box;
+}
+
+form{
+  display: flex;
+  gap: 1rem;
+}
+
+.input-container{
+  flex-grow: 1;
+  input{
+    inline-size: 100%;
+    min-inline-size: 0;
+  }
+}
+

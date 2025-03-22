@@ -1,0 +1,221 @@
+body {
+  margin: 0;
+}
+
+.main-bg {
+  padding-inline: 2rem;
+  padding-block: 5rem;
+}
+
+main {
+  padding-inline: 2rem;
+  padding-block: 3rem;
+}
+
+@media(width<500px) {
+  .main-bg {
+    padding-inline: 1rem;
+  }
+
+  main {
+    padding-inline: 1rem;
+  }
+}
+
+.m-in-auto {
+  margin-inline: auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+form {
+  margin-block-start: 2.5rem;
+}
+
+.dashboard-image {
+  margin-block: 4rem;
+}
+
+.pointer-event {
+  pointer-events: none;
+}
+
+.show {
+  display: block;
+}
+
+.err-state {
+  border: 1px solid var(--light-red);
+}
+
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+
+
+/*! theme toggle button*/
+.theme-btn {
+  background-color: var(--theme-btn-bg);
+  color: var(--theme-btn-color);
+
+  border-radius: 0.3rem;
+  font-weight: 600;
+  padding: 0.3rem 1rem;
+  cursor: pointer;
+  transition: 200ms;
+  opacity: 0;
+
+  position: fixed;
+  top: -30px;
+  right: 10px;
+  z-index: 99;
+
+  --opacity: opacity 1s ease-in-out 2s forwards;
+  --slide-in: slide-in 1s ease-in-out 2s forwards;
+
+  animation: var(--opacity), var(--slide-in);
+
+  &:hover {
+    background-color: var(--theme-btn-hover-bg);
+    color: var(--theme-btn-hover-color);
+  }
+
+  @media(width < 475px) {
+    cursor: default;
+  }
+}
+
+
+/*! notification */
+.context-menu {
+  position: fixed;
+  top: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 99;
+
+  background-color: var(--light-blue);
+  color: #fff;
+  font-size: 1rem;
+  padding-inline: 1rem;
+  padding-block: 0.5rem;
+  border-radius: 0.5rem;
+  transition: 200ms;
+
+  @media(width < 499px) {
+    display: none;
+  }
+}
+
+.slide-in {
+  top: 20px;
+}
+
+code {
+  font-weight: 600;
+  outline: 1px solid #fff;
+  margin-inline: 2px;
+  padding: 2px;
+  border-radius: 2px;
+}
+
+/* ! animations */
+
+@keyframes rotation {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes opacity {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  100% {
+    top: 20px;
+  }
+}
+
+/* animation: (name) (duration) (timing-function) (delay) (iteration-count) (direction) (fill-mode) (play-state); */
+.animation {
+  --opacity: opacity 1s linear 1s forwards;
+  --rotation-animation: rotation 30s linear infinite;
+
+  animation: var(--rotation-animation), var(--opacity);
+}
+
+.rotate-div {
+  position: fixed;
+  top: -325px;
+  right: -325px;
+  z-index: -1;
+  block-size: 650px;
+  inline-size: 650px;
+  opacity: 0;
+  border-radius: 1000px;
+  border: 3px solid var(--light-blue);
+
+  @media(width > 1400px) {
+    display: none;
+  }
+}
+
+.inner-divs {
+  position: absolute;
+  block-size: 20px;
+  inline-size: 20px;
+  background-color: var(--blue);
+  border-radius: inherit;
+  outline: 5px solid var(--base-bg);
+  transition: 200ms;
+}
+
+.top-left {
+  top: 87px;
+  left: 80px;
+
+}
+
+.bottom-right {
+  bottom: 87px;
+  right: 80px;
+}
+
+
+/* ! main bg animation */
+.large-bg-svg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  inline-size: 100vw;
+  block-size: 100vh;
+  z-index: -2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+
+  animation: rotation 90s linear 2s infinite, opacity 1s linear 2s forwards;
+
+  svg {
+    width: 200vw;
+    height: 200vh;
+  }
+}
+
+@media(width < 1400px) {
+  .large-bg-svg {
+    display: none;
+  }
+}
+
+@media (height < 700px) {
+  .large-bg-svg {
+    display: none;
+  }
+}

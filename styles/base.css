@@ -1,0 +1,49 @@
+@font-face {
+  font-family: 'Libre franklin';
+  src: url('../assets/fonts/libre-franklin-v18-latin-700.woff2') format('woff2');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'Libre franklin';
+  src: url('../assets/fonts/libre-franklin-v18-latin-600.woff2') format('woff2');
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Libre franklin';
+  src: url('../assets/fonts/libre-franklin-v18-latin-300.woff2') format('woff2');
+  font-weight: 300;
+}
+
+html{
+  scroll-behavior: smooth;
+}
+
+body {
+  --font: 1.25rem;
+
+  font-family: 'Libre franklin';
+  font-size: var(--font);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-inline-size: 100%;
+}
+
+input,
+button {
+  font-family: 'Libre franklin';
+  font-size: 1rem;
+  border-radius: 1000px;
+  border: none;
+}
+
+a {
+  text-decoration: none;
+}
